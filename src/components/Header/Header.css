@@ -1,9 +1,10 @@
-.nav-container{
+.nav-container {
+    background-color: rgb(247, 229, 247);
     display: flex;
-   align-items: center;
-   justify-content: space-between;
-}
-.title{
-    color:rgb(211, 5, 211) ;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.title {
+    color: rgb(211, 5, 211);
+}

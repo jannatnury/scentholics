@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: center;
 }
-.banner-text h1{
-    margin-top: 0%;
+.banner-text p{
+    color:purple;
 }
+
 .text{
     color: rgb(217, 89, 217);
 }
@@ -35,10 +36,10 @@
 }
 /* medis responsive for mobile devices */
 @media screen and (max-width:576px) {
-    .banner-text{
+    /* .banner-text{
         order: 2;
     }
     .img-container img{
         order: 1;
-    }
+    } */
 }

@@ -10,6 +10,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Banner></Banner>}></Route>
+        <Route path='/home' element={<Banner></Banner>}></Route>
       </Routes>
     </div>
   );
