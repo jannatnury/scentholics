@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Banner.css';
-import banner from '../../assets/image/perfume.png'
+import img from '../../assets/image/perfume.png'
 
 const Banner = () => {
     return (
@@ -16,7 +16,7 @@ const Banner = () => {
 
             </div>
             <div className='img-container  col-lg-6 col-sm-12 order-sm-first order-lg-last'>
-                <img src={banner} alt="" />
+                <img src={img} alt="" />
             </div>
         </div>
     );

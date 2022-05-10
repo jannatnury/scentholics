@@ -13,7 +13,7 @@ const MyCard = ({card}) => {
                     <Card.Text>
                         {details}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button className='card-button' variant="primary">View Details</Button>
                 </Card.Body>
             </Card>
         </div>

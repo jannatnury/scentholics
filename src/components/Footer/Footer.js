@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import logo from '../../assets/image/logo.png';
 
 const Footer = () => {
     return (
         // footer 
         <div className='footer-container'>
            <div className="col-sm-12 col-lg-4 mt-3 order-sm-last order-lg-first">
-               <h5>Scentaholics</h5>
+               <img className='logo' src={logo}alt="" />
                <p>Scentaholics.Inc.provides great deals on our huge collection of perfumes, with unique fragrance, fast shipping, free returns options you'll love</p>
                <p>Copyright 2022,Jannat Nury</p>
                <p className='text-danger'>Desclaimer.Terms and Conditions.Privacy Policy.</p>

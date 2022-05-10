@@ -6,7 +6,7 @@
     position: sticky;
  
 }
-
-.title {
-    color: rgb(211, 5, 211);
+.logo{
+    width: 150px;
+    height: auto;
 }
