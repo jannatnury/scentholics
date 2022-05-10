@@ -1,0 +1,10 @@
+.blog-container{
+    border: 3px solid rgb(211, 5, 211);
+    border-radius: 20px;
+    box-shadow: 5px rgb(211, 5, 211);
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    width: 70%;
+    
+}
