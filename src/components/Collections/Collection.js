@@ -10,7 +10,7 @@ const Collections = () => {
         .then(data=>setCards(data));
     },[]);
     return (
-        <div>
+        <div className='card-container'>
            {
                cards.map(card=> <Card key={card.id} card={card}></Card>)
            }
