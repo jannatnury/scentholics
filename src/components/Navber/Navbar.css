@@ -5,16 +5,17 @@ nav a{
     margin-left: 10px;
 }
 nav a:hover{
-    color: blue;
+    color: rgb(211, 5, 211);
     text-decoration: underline;
 }
 .sign-in{
-    border: 2px solid blue;
+    border: 2px solid rgb(211, 5, 211);
     border-radius: 5px;
 }
 .sign-in:hover{
     color: white;
-    background-color: blue;
+    background-color: rgb(223, 77, 223);
+    transition: 2s;
 }
 /* media resposvise for nav for mobile devices */
 @media screen and (max-width:576px){
