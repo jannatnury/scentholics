@@ -21,7 +21,7 @@ const Footer = () => {
            </div>
            <div className="col-sm-12 col-lg-4 mt-3 order-sm-2 order-lg-last">
                <h5>Contract with us</h5>
-               <p>Address : 141,Jannt Nury Street, <br /> Dhaka,Bangladesh</p>
+               <p>Address : 141,Jannat Nury Street, <br /> Dhaka,Bangladesh</p>
                <p>Contract us : +0880123456789</p>
                <h6>Get Best Offers</h6>
                <input className='bg-white rounded-3 input-field' type="text" />
