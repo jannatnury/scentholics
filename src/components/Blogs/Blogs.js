@@ -4,7 +4,7 @@ import './Blogs.css';
 const Blogs = () => {
     return (
         <div>
-            <h1 className='text-dark'>Explore Our Recent Blogs</h1>
+            <h1 className='text-dark my-4'>Explore Our Recent Blogs</h1>
             <div className="blog-container">
                 <h3>Difference between Authentication and Authorization -</h3>
                 <p>Authentication and Authorization are both used to maintain the safety of the resources of an automated system. Despite the similar-sounding terms, authentication and authorization are very different process with respect to each other. Authentication validates if the users are whom they claim to be. On the other hand, Authorization gives permission to access the resourses of the system. Authentication identifies the user, but authorization identifies the permission of accessibility of that user. Authentication is done before authorization. Authorization works through passwords and credentials, but authentication works through settings maintained by security teams.</p>

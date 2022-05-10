@@ -6,15 +6,16 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     margin-left: 80px;
+   
 }
 /* button styles */
-.card-button{
+#card-button{
     border: 2px solid rgb(211, 5, 211);
     background-color: white;
     color: rgb(211, 5, 211);
     border-radius: 10px;
 }
-.card-button:hover{
+#card-button:hover{
     color: white;
     background-color: rgb(223, 77, 223);
     transition: 2s;
