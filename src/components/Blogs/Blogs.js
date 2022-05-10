@@ -33,19 +33,23 @@ const Blogs = () => {
             </div>
             <div className="blog-container">
                 <h3>What other services does firebase provide other than authentication?</h3>
-                <p>
-                    Cloud Messaging
-                    Firebase can implement notifications, and it is fast, reliable, and scalable.
-
-                    Dynamic Links
-                    Firebase can generate deep links which redirect user to your applications.
-
-                    Predictions
-                    Firebase can help in making predictions about your application decisions with the help of google's AI.
-
-                    Google Analytics
-                    Firebase can help in growing and managing your application. It can become helpful in tracking user demographics, behavior, purchasing patterns, revenue reports.
-                </p>
+            
+                <li>
+                Cloud Messaging
+                    <p> Firebase can implement notifications, and it is fast, reliable, and scalable.</p>
+                </li>
+                <li>
+                Dynamic Links
+                    <p> Firebase can generate deep links which redirect user to your applications.</p>
+                </li>
+                <li>
+                Predictions
+                    <p>Firebase can help in making predictions about your application decisions with the help of google's AI.</p>
+                </li>
+                <li>
+                Google Analytics
+                    <p> Firebase can help in growing and managing your application. It can become helpful in tracking user demographics, behavior, purchasing patterns, revenue reports.</p>
+                </li>
             </div>
         </div>
     );
