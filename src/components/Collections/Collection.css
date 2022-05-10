@@ -20,3 +20,24 @@
     background-color: rgb(223, 77, 223);
     transition: 2s;
 }
+.intntory-btn{
+    border: none;
+    border-radius: 20px;
+    color:white;
+    background-color:rgb(249, 82, 249) ;
+    margin-top: 20px;
+}
+.intntory-btn:hover{
+    color: rgb(211, 5, 211);
+    background-color: white;
+    border:2px solid rgb(211, 5, 211);
+    /* transition-delay: 1s; */
+}
+/* mobile responaive */
+@media screen and (max-width:576px) {
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+       
+    }
+}

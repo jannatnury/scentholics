@@ -1,5 +1,10 @@
 .single-card{
     border: none;
     border-radius: 20px;
-    box-shadow:0 4px 8px 2px rgb(217, 89, 217);
+    /* box-shadow:0 4px 8px 2px rgb(217, 89, 217); */
+}
+.card-img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    overflow: hidden;
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../Card/MyCard';
 import './Collection.css';
 
@@ -17,6 +18,9 @@ const Collections = () => {
                     cards.map(card => <Card key={card.id} card={card}></Card>)
                 }
             </div>
+            <Link to="/*">
+                <button className='intntory-btn p-3 fw-bold' type="submit">Manage Inventories</button>
+            </Link>
         </div>
 
     );

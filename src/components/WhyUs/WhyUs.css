@@ -1,0 +1,14 @@
+
+.why-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-wu{
+    color: rgb(238, 135, 197);
+    font-weight: bold;
+}
+.container-img{
+    width: 300px;
+    height: 300px;
+}
