@@ -1,12 +1,10 @@
 nav a{
     color:black;
-    font-weight: bold;
     text-decoration: none;
     margin-left: 10px;
 }
 nav a:hover{
     color: rgb(211, 5, 211);
-    text-decoration: underline;
 }
 .sign-in{
     border: 2px solid rgb(211, 5, 211);

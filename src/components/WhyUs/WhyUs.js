@@ -1,13 +1,14 @@
 import React from 'react';
 import './WhyUs.css';
+import pic from '../../assets/image/ques.svg';
 
 const WhyUs = () => {
     return (
         <div>
-            <h2 className='title-wu font-monospace mt-4'>Why Choose Us</h2>
-            <div className='why-us bg-info'>
-                <div className='container-img'>
-                    <img src="https://winsomecomputermedia.com/assets/img/why.jpg" alt="" />
+            <h2 className='title font-monospace mt-4'>Why Choose Us</h2>
+            <div className='why-us'>
+                <div>
+                    <img className='img-fluid ques-img' src={pic} alt="" />
                 </div>
                 <div className="list-container">
                     <li> 100% Satisfaction Guarantee</li>

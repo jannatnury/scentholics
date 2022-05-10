@@ -8,8 +8,8 @@ const MyCard = ({ card }) => {
     return (
         <div>
             <div className=''>
-                <Card className='single-card' style={{ width: '18rem' }}>
-                    <Card.Img variant="top" className='card-img' src={img} />
+                <Card className='single-card shadow d-block mx-auto' style={{ width: '18rem' }}>
+                    <Card.Img variant="top" className='tanmay' src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>

@@ -20,7 +20,7 @@
 }
 .img-container img:hover{
     transform: scale(1.1);
-    transition: 1s;
+    transition: all 1s ease-in-out !important;
     overflow: hidden;  
 }
 .button{
