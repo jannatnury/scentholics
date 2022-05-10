@@ -1,0 +1,25 @@
+nav a{
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+nav a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.sign-in{
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+.sign-in:hover{
+    color: white;
+    background-color: blue;
+}
+/* media resposvise for nav for mobile devices */
+@media screen and (max-width:576px){
+    nav a{
+        display: flex;
+        flex-direction: column;
+    }
+}
