@@ -1,0 +1,45 @@
+[
+    {
+        "id": "001",
+        "name":"Perfume-01",
+        "img" :"/images/pf-10",
+        "details": "With more than 20% oil concentration, you are likely to still notice your fragrance working from morning to evening."
+       
+    },
+    {
+        "id": "002",
+        "name":"Perfume-02",
+        "img" :"/images/pf-3",
+        "details": "The next highest fragrance concentration would be eau de parfum (EDP)with oil concentration between 15 to 20%."
+       
+    },
+    {
+        "id": "003",
+        "name":"Perfume-03",
+        "img" :"/images/pf-5",
+        "details": "Eau de cologne (EDC) has a much lower fragrance concentration (about 2% to 4%), and therefore is cheaper than those above."
+       
+    },
+    {
+        "id": "004",
+        "name":"Perfume-04",
+        "img" :"/images/pf-7",
+        "details": "With more than 10% oil concentration, you are likely to still notice your fragrance working from morning to evening."
+    
+    },
+    {
+        "id": "005",
+        "name":"Perfume-05",
+        "img" :"/images/pf-9",
+        "details": "While eau fraiche has a low fragrance concentration, it does not contain a high amount of alcohol."
+       
+    },
+    {
+        "id": "006",
+        "name":"Perfume-06",
+        "img" :"/images/pf-8",
+        "details": "Eau fraiche is quite similar to EDC in that the scent will last for up to two hours.Suitable for all skin types"
+       
+    }
+   
+]
