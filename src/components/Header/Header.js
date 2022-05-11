@@ -5,7 +5,7 @@ import logo from '../../assets/image/logo.png'
 
 const Header = () => {
     return (
-        <div className='nav-container px-3  p-2'>
+        <div className='nav-container  p-2 container'>
             <img className='logo' src={logo} alt="" />
             <Navbar></Navbar>
         </div>
