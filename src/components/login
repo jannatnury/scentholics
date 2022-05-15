@@ -1,0 +1,182 @@
+import React, { useRef } from 'react';
+import { Form } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import './Login.css';
+import auth from '../../firebase.init';
+
+const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const nevigate = useNavigate();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+    
+    const handleSubmit = event =>{
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        signInWithEmailAndPassword(email, password);
+    }
+    
+    let errorElement;
+    const nevigateSignup= event=>{
+        nevigate('/sign-up')
+    }
+    
+    if (error) {
+        return (
+          <div>
+            <p>Error: {error.message}</p>
+          </div>
+        );
+      }
+    if(user){
+        nevigate('/home');
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+      }
+    return (
+        // Login form
+        <div className='login-container border border-primary w-25 m-auto py-2 mb-4'>
+            <Form onSubmit={handleSubmit} className='login-form'>
+                <h6>Email :</h6>
+                <input className='w-75' ref={emailRef} type="email" name="email" placeholder='Enter email' required />
+                <h6>Password :</h6>
+                <input className='w-75' ref={passwordRef} type="password" name="password" placeholder='Enter password'  required/>
+               <br/> 
+               <button className='w-50 mt-2 fw-bolder' type="submit" >Log In</button>
+            </Form>
+            {errorElement}
+            <p className=' font-monospace mt-2'>Don't have an account? <Link className='text-danger text-decoration-none' to="/sign-up" onClick={nevigateSignup}>Create an account.</Link></p>
+            <SocialLogin></SocialLogin>
+        </div>
+    );
+};
+
+export default Login;
+// ____________
+import React, { useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import './SignUp.css';
+import auth from '../../firebase.init';
+
+
+
+const SignUp = () => {
+
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  const handleRegister = async event => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    await createUserWithEmailAndPassword(email, password);
+
+  }
+  const nevigate = useNavigate();
+
+  // error message on any error
+  if (error) {
+    return (
+      <p className='text-danger'> {error.message}</p>
+
+    );
+  }
+  // loading message
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  const nevigateLogin = () => {
+    nevigate('/log-in');
+  }
+  // if user exists
+  if (user) {
+    nevigate('/home');
+  }
+
+  return (
+    <div>
+      <h5 className='text-danger'>Please Register :</h5>
+      <div className='sign-up-container border border-primary w-25 m-auto py-2 mb-4'>
+        <form onSubmit={handleRegister} className='sign-up-form'>
+          <h6>Name :</h6>
+          <input className='w-75' type="name" name="name" placeholder="Enter your full name" required />
+          <h6>Email :</h6>
+          <input className='w-75' type="email" name="email" placeholder="Enter email" required />
+          <h6>Password :</h6>
+          <input className='w-75' type="password" name="password" placeholder="Enter password" required />
+          <br />
+          <button className='w-50 mt-2 fw-bolder' type="submit" >Sign Up</button>
+        </form>
+        <p className=' font-monospace mt-2'>Already have an account? <Link className='text-danger text-decoration-none' to="/log-in" onClick={nevigateLogin} >Log In.</Link></p>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SignUp;
+________
+import React from 'react';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import './SocialLogin.css';
+
+
+const SocialLogin = () => {
+
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+
+    const nevigate = useNavigate();
+
+    let errorElement;
+
+    if (error || error1 ) {
+        return (
+            errorElement = <p className='text-danger'> {error?.message} {error1?.message}</p>
+          
+        );
+    }
+    if (user || user1) {
+        nevigate('/home');
+    }
+    if (loading || loading1) {
+        return <p>Loading...</p>;
+    }
+    return (
+        <div>
+            <div className='d-flex align-items-center'>
+                <div style={{ height: "1px" }} className="bg-dark w-50"></div>
+                <p className='px-2 mt-2'>or</p>
+                <div style={{ height: "1px" }} className="bg-dark w-50"></div>
+            </div>
+            {errorElement}
+            <div>
+                <button onClick={() => signInWithGoogle()} className='login-btn'> <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt="" /> Google Sign In</button>
+                <br />
+                <button onClick={()=> signInWithGithub()} className='login-btn mt-2 mb-3'> <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/042017/untitled-2_5.png?itok=IlsUnu37" alt="" /> Github Sign In</button>
+            </div>
+        </div>
+    );
+};
+
+export default SocialLogin;
