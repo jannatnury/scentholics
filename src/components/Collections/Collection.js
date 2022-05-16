@@ -11,9 +11,9 @@ const Collections = () => {
             .then(data => setCards(data));
     }, []);
     return (
-        <div>
+        <div className='container'>
             <h2 className='popular-cl font-monospace fw-bold my-4'>Popular Perfumes</h2>
-            <div className='card-container mt-3'>
+            <div className='row g-4'>
                 {
                     cards.map(card => <Card key={card.id} card={card}></Card>)
                 }

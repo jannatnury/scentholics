@@ -6,18 +6,20 @@ const MyCard = ({ card }) => {
     const { name, img, details } = card;
 
     return (
-        <div>
-            <div className=''>
-                <Card className='single-card shadow d-block mx-auto' style={{ width: '18rem' }}>
-                    <Card.Img variant="top" className='tanmay' src={img} />
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>
-                            {details}
-                        </Card.Text>
-                        <Link to="/sign-in"><Button id='card-button'>View Stock</Button></Link>
-                    </Card.Body>
-                </Card>
+        <div className='col-lg-4 col-sm-12 mt-3 h-100'>
+            <div className='p-3 h-100'>
+                <div className=" shadow row justify-content-between align-items-center  h-100">
+                    <div>
+                        <img src={img} className="card-img" alt="card image" />
+                    </div>
+                    <div className="card-body">
+                        <h5 className="card-title text-secondary font-monospace">{name}</h5>
+                        <p className="card-text">{details}</p>
+                        <button className='button px-3 py-2 text-white border-0' type="submit">
+                            <Link to="/checkout">Details</Link>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
