@@ -2,7 +2,9 @@
     {
         "id": "001",
         "name":"Miss Dior",
+        "price": "$19",
         "img" :"https://i.ibb.co/zHwwJsH/pf-02.png",
+        "supplier":"Jhon Milton",
         "details": "With more than 20% oil concentration, you are likely to still notice your fragrance working from morning to evening."
        
     },
@@ -10,6 +12,8 @@
         "id": "002",
         "name":"Chanel",
         "img" :"https://i.ibb.co/hV40nNZ/chanel.png",
+        "supplier":"Jannat Nury",
+        "price": "$14",
         "details": "The next highest fragrance concentration would be eau de parfum (EDP)with oil concentration between 15 to 20%."
        
     },
@@ -17,6 +21,8 @@
         "id": "003",
         "name":"Flower Boms",
         "img" :"https://i.ibb.co/4195wGr/pf-7.webp",
+        "supplier":"Ahil Abraham",
+        "price": "$24",
         "details": "Eau de cologne (EDC) has a much lower fragrance concentration (about 2% to 4%), and therefore is cheaper than those above."
        
     },
@@ -24,6 +30,8 @@
         "id": "004",
         "name":"Versace",
         "img" :"https://i.ibb.co/1rpcyR7/pf-4.webp",
+        "supplier":"Bella Bose",
+        "price": "$33",
         "details": "With more than 10% oil concentration, you are likely to still notice your fragrance working from morning to evening."
     
     },
@@ -31,6 +39,8 @@
         "id": "005",
         "name":"The Proposal",
         "img" :"https://i.ibb.co/vZFMGg6/pp-2.png",
+        "supplier":"Ruman Hasan",
+        "price": "$23",
         "details": "While eau fraiche has a low fragrance concentration, it does not contain a high amount of alcohol.Suitable for dry skin."
        
     },
@@ -38,6 +48,8 @@
         "id": "006",
         "name":"Victoria's Secret",
         "img" :"https://i.ibb.co/qnYmV6z/victoria1.png",
+        "supplier":"Tanmay Roy",
+        "price": "$13",
         "details": "Eau fraiche is quite similar to EDC in that the scent will last for up to two hours.Suitable for all skin types.See more details."
        
     },
@@ -45,6 +57,8 @@
         "id": "007",
         "name":"Royal Lady",
         "img" :"https://i.ibb.co/RjwyZ7K/p-7.jpg",
+        "supplier":"Parvez Ali",
+        "price": "$16",
         "details": "With more than 10% oil concentration, you are likely to still notice your fragrance working from morning to evening."
     
     },
@@ -52,6 +66,8 @@
         "id": "008",
         "name":"Daisy",
         "img" :"https://i.ibb.co/0CR2HMm/daisy.png",
+        "supplier":"Tania Tanu",
+        "price": "$19",
         "details": "While eau fraiche has a low fragrance concentration, it does not contain a high amount of alcohol.Suitable for dry skin."
        
     },
@@ -59,6 +75,8 @@
         "id": "009",
         "name":"Clive Christian",
         "img" :"https://i.ibb.co/f2ZWXcY/p-2.jpg",
+        "supplier":"Anna Maria",
+        "price": "$13",
         "details": "Eau fraiche is quite similar to EDC in that the scent will last for up to two hours.Suitable for all skin types.See more details."
        
     }

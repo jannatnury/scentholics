@@ -8,3 +8,11 @@
 #carousel-section p{
     color: black;
 }
+@media  screen and (max-width:576px) {
+    #carousel-section{
+        width: 450px;
+        height:auto ;
+        margin-right:5px;
+    }
+    
+}

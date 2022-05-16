@@ -6,7 +6,7 @@ import img from '../../assets/image/b-perfume.png'
 const Banner = () => {
     return (
         <div className='banner-container row container m-auto'>
-            <div className='img-container ms-tuto col-lg-6 col-sm-12'>
+            <div className='img-container m-auto justify-content-center col-lg-6 col-sm-12'>
                 <img src={img} alt="" />
             </div>
             <div className='banner-text col-lg-6 col-sm-12 '>

@@ -14,10 +14,10 @@
 .text{
     color: rgb(217, 89, 217);
 }
+/* image styles */
 .img-container img{
-    height: 500px;
-    width: 500px;
-    margin-top: 15px;
+    width: 450px;
+    height: 450px;
 }
 .img-container img:hover{
     transform: scale(1.1);
@@ -37,10 +37,8 @@
 }
 /* medis responsive for mobile devices */
 @media screen and (max-width:576px) {
-    /* .banner-text{
-        order: 2;
-    }
     .img-container img{
-        order: 1;
-    } */
+        width: 300px;
+        height: 300px;
+    }
 }
