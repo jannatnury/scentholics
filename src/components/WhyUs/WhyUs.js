@@ -4,7 +4,7 @@ import pic from '../../assets/image/ques.svg';
 
 const WhyUs = () => {
     return (
-        <div className='container shadow py-4 mt-5'>
+        <div className='container shadow py-4 mt-5 m-auto'>
             <h2 className='title font-monospace mb-0'>Why Choose Us</h2>
             <div className='row why-us m-auto container justify-content-evenly align-content-center mb-5 w-75'>
                 <div className='col-sm-12 col-lg-6 order-sm-first'>

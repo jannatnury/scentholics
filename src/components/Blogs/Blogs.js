@@ -1,9 +1,11 @@
 import React from 'react';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import './Blogs.css';
 
 const Blogs = () => {
     return (
         <div>
+            <PageTitle title="Blogs" ></PageTitle>
             <h1 className='text-dark my-4'>Explore Our Recent Blogs</h1>
             <div className="blog-container">
                 <h3>Difference between Authentication and Authorization -</h3>

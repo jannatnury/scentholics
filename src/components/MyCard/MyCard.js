@@ -18,7 +18,7 @@ const MyCard = ({ card }) => {
                         <p className="card-text">{details}</p>
                         <p>Price: <span className='fw-bold'>{price}</span></p>
                         <button className='button px-3 py-2' type="submit">
-                            <Link to="/checkout">Update</Link>
+                            <Link to="/stocks">Update</Link>
                         </button>
                     </div>
                 </div>

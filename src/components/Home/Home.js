@@ -7,6 +7,8 @@ import Customers from '../Customers/Customers';
 import WhyUs from '../WhyUs/WhyUs';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import PageTitle from '../Shared/PageTitle/PageTitle';
+
 
 const Home = () => {
     const [cards, setCards] = useState([]);
@@ -17,6 +19,7 @@ const Home = () => {
     }, []);
     return (
         <div>
+           <PageTitle title='home'></PageTitle>
             <Banner></Banner>
             <div className='container'>
                 <h2 className='popular-cl font-monospace fw-bold my-4'>Popular Perfumes</h2>
