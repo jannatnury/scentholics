@@ -1,20 +1,94 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import logo from '../../assets/image/google.svg';
-// import PageTitle from '../Shared/PageTitle/PageTitle';
+import { auth } from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const SignIn = () => {
+
+    const [userInfo, setUserInfo] = useState({
+        email: "",
+        password: "",
+    })
+
+    const [error, setError] = useState({
+        email: "",
+        password: "",
+        general: "",
+    })
+
+    const [signInWithEmail, user, loading, hookError] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
+
+    const handleEmailChange = (event) => {
+        const emailRegex = /\S+@\S+\.\S+/;
+        const validEmail = emailRegex.test(event.target.value);
+
+        if (validEmail) {
+            setUserInfo({ ...userInfo, email: event.target.value })
+            setError({ ...error, email: "" })
+        } else {
+            setError({ ...error, email: "Invalid Email" })
+            setUserInfo({ ...userInfo, email: "" })
+        }
+    }
+    const passwordChange = (event) => {
+
+        setUserInfo({ ...userInfo, password: event.target.value });
+
+    }
+
+    const handleSignin = (event) => {
+        event.preventDefault();
+        console.log(userInfo);
+
+        signInWithEmail(userInfo.email, userInfo.password);
+
+    }
+    const handleGoogle = () => {
+        signInWithGoogle();
+    }
+    // toast on password reset
+    const resetPassword = () => {
+        if (userInfo.email != "") {
+            const resolveTime = new Promise(resolve => setTimeout(resolve, 2000));
+            toast.promise(
+                resolveTime,
+                {
+                    pending: 'Please wait...',
+                    success: "Password reset link was sent successfully!",
+                    error: 'Enrollment Failed!'
+                }
+            )
+        } else {
+            toast("Enter your email.");
+        }
+    }
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+
+    useEffect(() => {
+        if (user || googleUser) {
+            navigate(from, { replace: true });
+        }
+    }, [user, googleUser]);
+
     return (
         <div className='container p-5 pt-0'>
-            {/* <PageTitle title="Sign In"></PageTitle> */}
+            <PageTitle title="Sign In"></PageTitle>
             <div className='col-md-6 mx-auto p-5 shadow m-5 rounded-10 bg-light'>
-                <h2 className="text-center">Sign In to Your Profile</h2>
-                <form>
+                <h2 className="text-center">Sign In</h2>
+                <form onSubmit={handleSignin}>
                     <div className='mb-2 mt-2'>
                         <label htmlFor='email'>Email</label>
                         <div className=''>
                             <input className="form-control" type='text' name='email'
-                                id='email' required />
+                                id='email' onBlur={handleEmailChange} required />
                         </div>
                     </div>
                     <div className='mb-2'>
@@ -23,12 +97,12 @@ const SignIn = () => {
                             <input className="form-control"
                                 type='password'
                                 name='password'
-                                id='password' required
+                                id='password' onBlur={passwordChange} required
                             />
                         </div>
                     </div>
                     <div>
-                        <p className="ps-0 text-primary btn">Forgot Password?</p>
+                        <p onClick={resetPassword} className="ps-0 text-primary btn">Forgot Password?</p>
                     </div>
                     <button type='submit' className='btn btn-dark d-block w-100'>
                         Sign In
@@ -44,7 +118,7 @@ const SignIn = () => {
                     <hr className="col-5" />
                 </div>
                 <div className=''>
-                    <button className='px-5 btn btn-outline-dark d-flex justify-content-center align-items-center w-100'
+                    <button onClick={handleGoogle} className='px-5 btn btn-outline-dark d-flex justify-content-center align-items-center w-100'
                     >
                         <img className="d-block" src={logo} alt='' />
                         <p className="mt-3 fs-5 ms-3"> Google Sign In </p>
