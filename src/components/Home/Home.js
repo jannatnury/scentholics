@@ -13,13 +13,13 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 const Home = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/api/product')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);
     return (
         <div>
-           <PageTitle title='home'></PageTitle>
+           <PageTitle title='Home'></PageTitle>
             <Banner></Banner>
             <div className='container'>
                 <h2 className='popular-cl font-monospace fw-bold my-4'>Popular Perfumes</h2>
@@ -28,8 +28,8 @@ const Home = () => {
                         cards.slice(0, 6).map(card => <MyCard key={card.id} card={card}></MyCard>)
                     }
                 </div>
-                <Link to="/gallery">
-                    <button className='intntory-btn p-2 fw-bold' type="submit">Manage Inventories</button>
+                <Link to="/gellary">
+                    <button className='intntory-btn p-2 fw-bold' type="submit">View All Products</button>
                 </Link>
             </div>
             <Perfume></Perfume>

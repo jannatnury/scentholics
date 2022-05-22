@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './MyCard.css';
 
 const MyCard = ({ card }) => {
-    const { name, img, details,supplier,price } = card;
+
+    const { name, img, details,supplier,price,_id,quantity } = card;
 
     return (
         <div className='col-lg-4 col-sm-12 mt-3 h-100'>
@@ -16,9 +17,10 @@ const MyCard = ({ card }) => {
                         <h5 className="card-title text-secondary font-monospace">{name}</h5>
                         <p>Suppier : <span className='fw-bold'>{supplier}</span> </p>
                         <p className="card-text">{details}</p>
+                        <p>Quantity: <span className='fw-bold'>{quantity}</span></p>
                         <p>Price: <span className='fw-bold'>{price}</span></p>
                         <button className='button px-3 py-2' type="submit">
-                            <Link to="/stocks">Update</Link>
+                            <Link to={`/inventory/${_id}`}>Update</Link>
                         </button>
                     </div>
                 </div>

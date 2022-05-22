@@ -20,7 +20,7 @@ const Customers = () => {
                             <img src={img1} className="d-block w-100" alt="carousel-img" />
                             <div className="carousel-caption d-none d-md-block">
                             <h3>Ema Aurora</h3>
-                            <p>Excellent service, my shipment arrived fast in perfect condition, at a great price.</p>>
+                            <p>Excellent service, my shipment arrived fast in perfect condition, at a great price.</p>
                             </div>
                         </div>
                         <div className="carousel-item">

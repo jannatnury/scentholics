@@ -101,7 +101,7 @@ const SignUp = () => {
                     </div>
                     <div className='mb-2'>
                         <label htmlFor='password'>Password</label>
-                        <div className=''>
+                        <div>
                             <input className="form-control"
                                 type='password'
                                 name='password'
