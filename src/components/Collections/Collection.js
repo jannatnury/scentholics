@@ -6,7 +6,7 @@ import './Collection.css';
 const Collections = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/product')
+        fetch('https://guarded-escarpment-61414.herokuapp.com/api/product')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);

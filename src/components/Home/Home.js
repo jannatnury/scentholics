@@ -13,7 +13,7 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 const Home = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/product')
+        fetch('https://guarded-escarpment-61414.herokuapp.com/api/product')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);
@@ -28,8 +28,8 @@ const Home = () => {
                         cards.slice(0, 6).map(card => <MyCard key={card.id} card={card}></MyCard>)
                     }
                 </div>
-                <Link to="/gellary">
-                    <button className='intntory-btn p-2 fw-bold' type="submit">View All Products</button>
+                <Link to="/inventory">
+                    <button className=' p-2 fw-bold' type="submit">Manage Inventory</button>
                 </Link>
             </div>
             <Perfume></Perfume>

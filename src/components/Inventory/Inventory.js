@@ -1,35 +1,30 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Inventory = () => {
 
-      const [cards,setcards]=useState([])
-    useEffect(()=>{
-        fetch('data.json')
-        .then(res=>res.json())
-        .then(data=>setcards(data))
-    },[])
-    const handleDelete=id=>{
-      // const {id}=useParams()
-      const confirm=window.confirm('Areyou want to delete')
-      if(confirm){
-          console.log("id",id);
-          const url=`https://lit-shelf-48296.herokuapp.com/car/${id}`
-          fetch(url,{
-              method:'DELETE'
-          })
-          .then(res=>res.json())
-          .then(data=>{
-              if(data.deletedCount>0){
-
-                  const remainingCar=cards.filter(card=>card._id!==id)
-                  setcards(remainingCar)
-              }
-          })
-      }
-  }
+    const [cards, setcards] = useState([]);
+    useEffect(() => {
+        fetch('https://guarded-escarpment-61414.herokuapp.com/api/product')
+            .then(res => res.json())
+            .then(data => setcards(data))
+    }, [])
+    const handleDelete = id => {
+        // const {id}=useParams()
+        const confirm = window.confirm('Areyou want to delete');
+        if (confirm) {
+            axios.delete(`https://guarded-escarpment-61414.herokuapp.com/api/product/${id}`)
+                .then(res => {
+                    if (res.data.deletedCount) {
+                        alert("Product Is Deleted Successfully!!");
+                        const remainingOrders = cards.filter(product => product._id !== id);
+                        setcards(remainingOrders);
+                    }
+                })
+        }
+    }
 
     return (
         <div className='container  my-4'>

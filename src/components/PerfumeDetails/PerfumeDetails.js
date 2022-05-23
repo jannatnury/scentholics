@@ -6,7 +6,7 @@ const PerfumeDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/api/products/${id}`)
+        fetch(`https://guarded-escarpment-61414.herokuapp.com/api/products/${id}`)
         .then(res => res.json())
         .then(data=> setProduct(data))
     },[])
@@ -16,7 +16,7 @@ const PerfumeDetails = () => {
         e.preventDefault();
         const id = product._id;
         const qtn = e.target.shipped.value
-        const url = `http://localhost:5000/api/product/stock/${id}`;
+        const url = `https://guarded-escarpment-61414.herokuapp.com/api/product/stock/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -34,7 +34,7 @@ const PerfumeDetails = () => {
     const handleDeliver = ()=>{
         const id = product._id;
         const qtn = 1
-        const url = `http://localhost:5000/api/products/shipped/${id}`;
+        const url = `https://guarded-escarpment-61414.herokuapp.com/api/products/shipped/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -49,12 +49,12 @@ const PerfumeDetails = () => {
     }
 
     return (
-        <div className='row container ms-auto my-5'>
+        <div className='row container ms-auto my-5 m-auto d-flex align-items-center'>
             <PageTitle title="Perfume-details"></PageTitle>
-            <div className="col-lg-6">
+            <div className="col-12 col-lg-6">
                 <img src={img} alt="" />
             </div>
-            <div className="col-lg-6">
+            <div className="col-12 col-lg-6 shadow p-4">
                 <h2>Name:{name}</h2>
                 <p>Quantity:{quantity}</p>
                 <p>Supplier:{supplier}</p>
