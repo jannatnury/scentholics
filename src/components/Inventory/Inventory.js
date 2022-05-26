@@ -7,7 +7,7 @@ const Inventory = () => {
 
     const [cards, setcards] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-escarpment-61414.herokuapp.com/api/product')
+        fetch('http://localhost:5000/api/product')
             .then(res => res.json())
             .then(data => setcards(data))
     }, [])
@@ -46,7 +46,7 @@ const Inventory = () => {
                             >
                                 <td>{card.name}</td>
                                 <td>{card.quantity}</td>
-                                <td><button onClick={() => handleDelete(card._id)} type="button" class="btn btn-outline-dark">Delete</button></td>
+                                <td><button onClick={() => handleDelete(card._id)} type="button" className="btn btn-outline-dark">Delete</button></td>
                             </tr>
                         )
                     }

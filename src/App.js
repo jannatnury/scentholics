@@ -23,8 +23,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/gellary' element={<Collections></Collections>}></Route>
+        <Route path='/gallery' element={<Collections></Collections>}></Route>
         <Route path='/inventory' element={
           <RequiredAuth>
             <Inventory></Inventory>
@@ -35,7 +34,7 @@ function App() {
             <PerfumeDetails></PerfumeDetails>
           </RequiredAuth>
         }></Route>
-        <Route path='items' element={
+        <Route path='/items' element={
           <RequiredAuth>
             <Items></Items>
           </RequiredAuth>

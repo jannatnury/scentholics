@@ -29,7 +29,7 @@ const Home = () => {
                     }
                 </div>
                 <Link to="/inventory">
-                    <button className=' p-2 fw-bold' type="submit">Manage Inventory</button>
+                    <button className='intntory-btn p-2 fw-bold' type="submit">Manage Inventory</button>
                 </Link>
             </div>
             <Perfume></Perfume>
