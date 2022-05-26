@@ -1,8 +1,8 @@
 import React from 'react';
 import './Customers.css';
-import img1 from '../../assets/image/lady01.png';
-import img2 from '../../assets/image/lady02.png';
-import img3 from '../../assets/image/lady03.png';
+import img1 from '../../assets/image/lady.jpg';
+import img2 from '../../assets/image/lady2.jpg';
+import img3 from '../../assets/image/lady3.png';
 
 const Customers = () => {
     return (
