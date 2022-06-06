@@ -117,7 +117,7 @@ const SignIn = () => {
                     <p className="col-1">or</p>
                     <hr className="col-5" />
                 </div>
-                <div className=''>
+                <div>
                     <button onClick={handleGoogle} className='px-5 btn btn-outline-dark d-flex justify-content-center align-items-center w-100'
                     >
                         <img className="d-block" src={logo} alt='' />

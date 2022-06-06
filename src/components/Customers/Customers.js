@@ -6,9 +6,9 @@ import img3 from '../../assets/image/lady3.png';
 
 const Customers = () => {
     return (
-        <div>
+        <div className='container d-flex flex-column align-items-center justify-content-center '>
             <h2 className='title font-monospace mt-5 mb-3'>Our Clients Reviews</h2>
-            <div id='carousel-section' className='container-fluid mb-4 align-content-center'>
+            <div id='carousel-section' className='container-fluid mb-4 align-content-center w-100 sm-w-100'>
                 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

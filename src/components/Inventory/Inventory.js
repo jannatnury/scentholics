@@ -7,13 +7,14 @@ const Inventory = () => {
 
     const [cards, setcards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/product')
+        fetch('https://guarded-escarpment-61414.herokuapp.com/api/product')
             .then(res => res.json())
             .then(data => setcards(data))
     }, [])
+    console.log(cards);
     const handleDelete = id => {
         // const {id}=useParams()
-        const confirm = window.confirm('Areyou want to delete');
+        const confirm = window.confirm('Are you want to delete');
         if (confirm) {
             axios.delete(`https://guarded-escarpment-61414.herokuapp.com/api/product/${id}`)
                 .then(res => {
